@@ -44,11 +44,11 @@ myfmt[[6]] <- c("annotate",c('"iNat Id \\\\n "','obs_id','" "'),"black", 20,"nor
 
 # Get some iNaturalist data for a butterfly Idea malabarica
 inatdata <- get_inat_obs(query = "Idea malabarica",maxresults = 5)
-downlaod_inat_images(inatdata,size="medium", outpath=".\\\\test\\\\", img_format=myfmt,
+downlaod_inat_images(inatdata,size="medium", outpath=".", img_format=myfmt,
                      firstonly=TRUE,verbose=TRUE)
 # Get some iNaturalist data for a user
-inatdata <- get_inat_obs_user("vijaybarve", maxresults = 15)
-downlaod_inat_images(inatdata,size="medium", outpath=".\\\\test\\\\", img_format=myfmt,
+inatdata <- get_inat_obs_user("vijaybarve", maxresults = 5)
+downlaod_inat_images(inatdata,size="medium", outpath=".", img_format=myfmt,
                      firstonly=TRUE,verbose=TRUE)
 }
 }

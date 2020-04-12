@@ -36,7 +36,12 @@
 downlaod_inat_images <- function(dat,size="medium", outpath=".", img_format=NULL,
                             firstonly=TRUE,verbose=TRUE){
   # Need to check if dat is not empty and it is indeed iNaturalist data
-  for (i in 1:dim(dat)[1]){
+  if(!dir.exists(outpath)){
+    dir.create(outpath)
+    warning(paste("Counld not fing folder",outpath,". Creating folder."))
+  }
+
+  for (i in 1:nrow(dat)){
     if(verbose){
       if(firstonly){
         cat(paste("\n",dat$id[i]))
@@ -68,4 +73,5 @@ downlaod_inat_images <- function(dat,size="medium", outpath=".", img_format=NULL
       }
     }
   }
+  cat("\n\n")
 }
