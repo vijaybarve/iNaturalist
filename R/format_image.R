@@ -11,6 +11,7 @@
 #' \item{border dimentions -} {horizontal x verticle border in pixels.}}
 #' For Annotations the componants of the list are \itemize{ \item{keyword -} {"annonate"}
 #' \item{text -} { see bellow list of text components}
+#' \item{font -} {Font to use. Specify NA for sans'}
 #' \item{color -} {color name}
 #' \item{font size -} {Font size in pixel}
 #' \item{placement -} {"southeast", "southwest", "northeast", "northwest"}}
@@ -35,10 +36,10 @@
 #' myfmt <- NULL
 #' myfmt[[1]] <- c("border","white","20x50")
 #' myfmt[[2]] <- c("border","grey", "2x2")
-#' myfmt[[3]] <- c("annotate",c('"\u00A9"', 'photoby','"   "'),"black", 20,"southeast")
-#' myfmt[[4]] <- c("annotate",c('" "','scname','"\\n "', 'cname'),"black", 20,"northwest")
-#' myfmt[[5]] <- c("annotate",c('" "','place','"\\n "', 'photodate'),"black", 20,"southwest")
-#' myfmt[[6]] <- c("annotate",c('"iNat Id \\n "','obs_id','" "'),"black", 20,"northeast")
+#' myfmt[[3]] <- c("annotate",c('"\u00A9"', 'photoby','"   "'),NA,"black", 20,"southeast")
+#' myfmt[[4]] <- c("annotate",c('" "','scname','"\\n "', 'cname'),NA,"black", 20,"northwest")
+#' myfmt[[5]] <- c("annotate",c('" "','place','"\\n "', 'photodate'),NA,"black", 20,"southwest")
+#' myfmt[[6]] <- c("annotate",c('"iNat Id \\n "','obs_id','" "'),NA,"black", 20,"northeast")
 #' format_image(imginfo,img_no,size="medium",img_format=myfmt)
 #' }
 #' @export
