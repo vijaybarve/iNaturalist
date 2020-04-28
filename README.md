@@ -23,10 +23,10 @@ require(iNaturalist)
 myfmt <- NULL
 myfmt[[1]] <- c("border","white","20x50")
 myfmt[[2]] <- c("border","grey", "2x2")
-myfmt[[3]] <- c("annotate",c('"\u00A9"', 'photoby','"   "'),"black", 20,"southeast")
-myfmt[[4]] <- c("annotate",c('" "','scname','"\\n "', 'cname'),"black", 20,"northwest")
-myfmt[[5]] <- c("annotate",c('" "','place','"\\n "', 'photodate'),"black", 20,"southwest")
-myfmt[[6]] <- c("annotate",c('"iNat Id \\n "','obs_id','" "'),"black", 20,"northeast")
+myfmt[[3]] <- c("annotate",c('"\u00A9"', 'photoby','"   "'),"black",NA, 20,"southeast")
+myfmt[[4]] <- c("annotate",c('" "','scname','"\\n "', 'cname'),"black",NA, 20,"northwest")
+myfmt[[5]] <- c("annotate",c('" "','place','"\\n "', 'photodate'),"black",NA, 20,"southwest")
+myfmt[[6]] <- c("annotate",c('"iNat Id \\n "','obs_id','" "'),"black",NA, 20,"northeast")
 
 # Get some iNaturalist data for a butterfly Idea malabarica
 inatdata <- get_inat_obs(query = "Idea malabarica",maxresults = 5)
