@@ -12,6 +12,7 @@
 #' For Annotations the componants of the list are \itemize{ \item{keyword -} {"annonate"}
 #' \item{text -} { see bellow list of text components}
 #' \item{font -} {Font to use. Specify NA for sans'}
+#' \item{font style -} {Font style to use. Specify "italic" to italicize else NA'}
 #' \item{color -} {color name}
 #' \item{font size -} {Font size in pixel}
 #' \item{placement -} {"southeast", "southwest", "northeast", "northwest"}}
@@ -33,13 +34,23 @@
 #' @importFrom magrittr %>%
 #' @examples
 #' \dontrun{
+#' font <- "Times"
+#' fontsize <- 18
+#' fontstyle <- NA
+#' fontcolor <- "white"
 #' myfmt <- NULL
-#' myfmt[[1]] <- c("border","white","20x50")
+#' myfmt[[1]] <- c("border","black","20x50")
 #' myfmt[[2]] <- c("border","grey", "2x2")
-#' myfmt[[3]] <- c("annotate",c('"\u00A9"', 'photoby','"   "'),NA,"black", 20,"southeast")
-#' myfmt[[4]] <- c("annotate",c('" "','scname','"\\n "', 'cname'),NA,"black", 20,"northwest")
-#' myfmt[[5]] <- c("annotate",c('" "','place','"\\n "', 'photodate'),NA,"black", 20,"southwest")
-#' myfmt[[6]] <- c("annotate",c('"iNat Id \\n "','obs_id','" "'),NA,"black", 20,"northeast")
+#' myfmt[[3]] <- c("annotate",c('"\u00A9"', 'photoby','"   "'),font,fontstyle,
+#'                 fontcolor, fontsize,"southeast")
+#' myfmt[[4]] <- c("annotate",c('" "','scname'),font,"italic",
+#'                 fontcolor,fontsize,"northwest")
+#' myfmt[[5]] <- c("annotate",c('"\\n "', 'cname'),font,fontstyle,
+#'                 fontcolor, fontsize,"northwest")
+#' myfmt[[6]] <- c("annotate",c('" "','place','"\\n "', 'photodate'),font,fontstyle,
+#'                 fontcolor, fontsize,"southwest")
+#' myfmt[[7]] <- c("annotate",c('"iNat Id \\n "','obs_id','" "'),font,fontstyle,
+#'                 fontcolor, fontsize,"northeast")
 #' format_image(imginfo,img_no,size="medium",img_format=myfmt)
 #' }
 #' @export
